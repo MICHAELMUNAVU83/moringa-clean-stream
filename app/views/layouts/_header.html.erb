@@ -3,7 +3,7 @@
     <% if user_signed_in? %> 
      <h2 class="navbar-brand" > Welcome ,<%= current_user.name %> </h2>
     <% else %>
-      <h2 class="navbar-brand"> Not a member ? <h2>
+      <h2 class="navbar-brand"> Not a user yet? Sign up here </h2>
     <% end %>   
 
     
@@ -17,9 +17,12 @@
              <li class="nav-item">
                <%= link_to "See My Bins", bins_path, class: "nav-link active" %>
             </li>
+        
+            <% if current_user.email == "admin@gmail.com" %>
             <li class="nav-item">
                <%= link_to "Add a Bin", new_bin_path, class: "nav-link active" %>
             </li>
+            <% end %>
         <% else %>
            <li class="nav-item">
               <%= link_to "Sign up" , new_user_registration_path , class: "btn btn-outline-success mx-4"%>

@@ -37,8 +37,10 @@
       </button>
       <br>
       <br>
+      <% if current_user.email == "admin@gmail.com" %>
       
-      <%= button_to "Remove this bin from the system", bin_path(@bin), method: :delete, data: { confirm: "Are you sure?" } %>
+      <%= button_to "Remove this bin from the system", bin_path(@bin), method: :delete, data: { confirm: "Are you sure?" } , class: "btn btn-danger" %>
+      <% end %>
      
     </div>
   </div>
