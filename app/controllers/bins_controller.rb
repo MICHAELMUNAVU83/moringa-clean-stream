@@ -5,6 +5,7 @@ class BinsController < ApplicationController
   # GET /bins or /bins.json
   def index
     @bins = Bin.all
+
   end
 
   # GET /bins/1 or /bins/1.json

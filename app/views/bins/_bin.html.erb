@@ -14,4 +14,15 @@
     <%= bin.emptied %>
   </p>
 
+  <% if bin.waste_level > 100 %>
+    <p>
+      <strong>Bin is full</strong>
+    </p>
+  <% else %>
+    <p>
+      <strong>Bin is not full</strong>
+    </p>
+  <% end %>
+
+
 </div>
