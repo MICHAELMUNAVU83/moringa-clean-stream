@@ -2,13 +2,51 @@
 
 <h1>Bins</h1>
 
-<div id="bins">
-  <% @bins.each do |bin| %>
-    <%= render bin %>
-    <p>
-      <%= link_to "Show this bin", bin %>
-    </p>
-  <% end %>
+<div class="container">
+
+<div class="row pb-5 mb-4">
+   
+      <!-- Card-->
+      <% @bins.each do |bin| %>
+        <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+      <div class="card rounded shadow-sm border-0 h-100">
+        <div class="card-body p-4">
+
+        <% if bin.waste_level > 50 %>
+        <img  src="https://images.unsplash.com/photo-1605600659908-0ef719419d41?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=436&q=80" alt="fullbin" class="img-fluid d-block mx-auto mb-3">
+        <% else %>
+        <img src="https://images.unsplash.com/photo-1518778578946-2adac1f0ecbf?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=379&q=80" alt="emptybin" class="img-fluid d-block mx-auto mb-3">
+        <% end %>
+
+        <div  class="card-body p-4">
+
+          <h6 class="card-title text-center">Location:<%= bin.location %> </h6>
+
+          <p class="card-text">Waste Level:<%= bin.waste_level %></p>
+
+          <p class="card-text">Emptied:<%= bin.emptied %></p>
+          <p class="btn btn-primary">
+           <%= link_to "Show this bin", bin %>
+          </p>
+
+        </div>
+
+         
+        </div>
+        </div>
+      </div>
+      <% end %>
+ 
+</div>
+<button class="add-btn btn btn-primary">
+<i class="fa-solid fa-plus">
+<%= link_to "New Bin", new_bin_path %>
+</i>
+</button>
 </div>
 
-<%= link_to "New bin", new_bin_path %>
+
+  
+
+
+

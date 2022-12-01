@@ -1,10 +1,42 @@
 <p style="color: green"><%= notice %></p>
 
-<%= render @bin %>
+<div style="margin-top: 50px" class="container">
+  <div class="row">
+    <div class="col-sm">
+      <% if @bin.waste_level > 50 %>
+      <img  src="https://images.unsplash.com/photo-1605600659908-0ef719419d41?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=436&q=80" alt="fullbin" class="img-fluid d-block mx-auto mb-3">
+      <% else %>
+      <img src="https://images.unsplash.com/photo-1518778578946-2adac1f0ecbf?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=379&q=80" alt="emptybin" class="img-fluid d-block mx-auto mb-3">
+      <% end %>
+    </div>
+    <div class="col-sm"> 
+    <h5 class="card-title text-center">Location:<%= @bin.location %> </h5>
+
+    <br>
+
+    <h5 class="card-title text-center">Waste Level:<%= @bin.waste_level %></h5>
+
+    <br>
+
+    <h5 class="card-title text-center">Emptied:<%= @bin.emptied %></h5>
+    </div>
+    <div class="col-sm">
+      <button class="btn btn-primary">
+      <%= link_to "Edit this bin", edit_bin_path(@bin) %> 
+      </button>
+      <br>
+      <br>
+      <button class="btn btn-primary">
+      <%= link_to "Back to bins", bins_path %>
+      </button>
+      <br>
+      <br>
+      <button class="btn btn-danger">
+      <%= link_to "Destroy this bin", @bin, method: :delete %> 
+      </button>
+    </div>
+  </div>
+</div>
 
 <div>
-  <%= link_to "Edit this bin", edit_bin_path(@bin) %> |
-  <%= link_to "Back to bins", bins_path %>
-
-  <%= button_to "Destroy this bin", @bin, method: :delete %>
 </div>
