@@ -13,3 +13,28 @@
  *= require_tree .
  *= require_self
  */
+
+ .container{
+    position: relative;
+ }
+
+ .btn a{
+    color: #fff;
+    text-decoration: none;
+ }
+
+.add-btn{
+        position: fixed;
+        right: 20px;
+        bottom: 20px;
+        cursor: pointer;
+}
+
+.add-btn a{
+    text-decoration: none;
+}
+
+.add-btn a:hover{
+    color: #fff;
+}
+    
