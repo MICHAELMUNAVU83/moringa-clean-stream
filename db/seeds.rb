@@ -4,4 +4,11 @@
 # Examples:
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
-#   Character.create(name: "Luke", movie: movies.first)
+#   Character.create(name: "Luke", movie: movies.first)}
+users=User.create(email:"admin@gmail.com", password:123456, password_confirmation:123456, name:"admin", location:"admin" , company_name:"admin")
+
+bin1 = Bin.create(location:"Kisumu", waste_level:   0, emptied:false)
+bin2 = Bin.create(location:"Nairobi CBD", waste_level:55, emptied:false)
+bin3 = Bin.create(location:"Nairobi CBD", waste_level:0, emptied:false)
+bin4 = Bin.create(location:"Kisumu", waste_level:12, emptied:false)
+
