@@ -22,12 +22,12 @@
 
           <h6 class="card-title text-center">Location:<%= bin.location %> </h6>
 
-          <p class="card-text">Waste Level:<%= bin.waste_level %></p>
+          <p class="card-text text-center">Waste Level:<%= bin.waste_level %></p>
 
-          <p class="card-text">Emptied:<%= bin.emptied %></p>
-          <p class="btn btn-primary">
-           <%= link_to "Show this bin", bin %>
-          </p>
+          <p class="card-text text-center">Emptied:<%= bin.emptied %></p>
+          <div class="btn btn-primary d-flex justify-content-center">
+           <%= link_to "Show this bin", bin , class: "btn btn-primary" %>
+          </div>
 
         </div>
 
@@ -38,11 +38,7 @@
       <% end %>
  
 </div>
-<button class="add-btn btn btn-primary">
-<i class="fa-solid fa-plus">
-<%= link_to "New Bin", new_bin_path %>
-</i>
-</button>
+
 </div>
 
 
