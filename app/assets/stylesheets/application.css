@@ -20,7 +20,7 @@ body {
 
 .splash-intro {
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url("unsplash.jpg");
+    url("https://images.unsplash.com/photo-1635691315495-ff39debe5764?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8Z2FyYmFnZSUyMGNvbGxlY3Rpb258ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -106,4 +106,29 @@ body {
 .splash-hide {
   display: none;
   margin-top: -2rem;
+}
+
+.table {
+  width: 300px !important;
+}
+
+.patient-image {
+  width: 200px !important;
+  border-radius: 50% !important;
+  height: 200px !important;
+}
+
+.conditions-list {
+  background-color: #f5f5f5;
+}
+
+.conditions-list li {
+  list-style: none;
+  padding: 10px 15px;
+  border-bottom: 1px solid #ccc;
+}
+
+.patient-code {
+  margin-top: -15%;
+  margin-left: 5rem;
 }
