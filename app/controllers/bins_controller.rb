@@ -4,7 +4,12 @@ class BinsController < ApplicationController
 
   # GET /bins or /bins.json
   def index
+    if current_user.email == "admin@gmail.com"
     @bins = Bin.all
+    else
+      @bins = Bin.where(location: current_user.location)
+    end
+    
 
   end
 
@@ -42,6 +47,7 @@ class BinsController < ApplicationController
       if @bin.update(bin_params)
         format.html { redirect_to bin_url(@bin), notice: "Bin was successfully updated." }
         format.json { render :show, status: :ok, location: @bin }
+
       else
         format.html { render :edit, status: :unprocessable_entity }
         format.json { render json: @bin.errors, status: :unprocessable_entity }
