@@ -13,7 +13,7 @@
 
   <div>
     <%= form.label :location, style: "display: block" %>
-    <%= form.text_field :location %>
+    <%= form.select :location, ["Juja", "Mombasa", "Kisumu", "Nairobi CBD"], {}, { class: "form-select" } %>
   </div>
 
   <div>
@@ -22,11 +22,11 @@
   </div>
 
   <div>
-    <%= form.label :emptied, style: "display: block" %>
-    <%= form.check_box :emptied %>
+   Tick this box if the bin is emptied <%= form.check_box :emptied %>
+   
   </div>
 
-  <div>
-    <%= form.submit %>
+  <div class="d-flex justify-content-center mt-3">
+    <%= form.submit  class: "btn btn-primary" %>
   </div>
 <% end %>

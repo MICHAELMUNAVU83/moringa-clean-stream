@@ -13,7 +13,7 @@
         <div class="card-body p-4">
 
         <% if bin.waste_level > 50 %>
-          <%= image_tag "dirty.jpeg", class: "img-fluid d-block mx-auto mb-3 h-50" %>
+          <%= image_tag "fullbin.jpeg", class: "img-fluid d-block mx-auto mb-3 h-50" %>
         <% else %>
           <%= image_tag "clean.png", class: "img-fluid d-block mx-auto mb-3 h-50" %>
         <% end %>
@@ -27,7 +27,7 @@
 
           <p class="card-text text-center"> This bin has been emptied</p>
           <% else %>
-          <p class="card-text text-center"> This bin has not been emptied</p>
+          <p class="card-text text-center text-danger"> This bin has not been emptied</p>
           <% end %>
           <div class="btn btn-primary d-flex justify-content-center">
            <%= link_to "Show this bin", bin , class: "btn btn-primary" %>
